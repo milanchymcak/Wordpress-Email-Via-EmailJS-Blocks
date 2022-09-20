@@ -20,7 +20,7 @@
 add_action(
 	'init', 
 	function () {
-		foreach (glob( __DIR__  . "/build/blocks/*/" ) as $block_type) {
+		foreach (glob( __DIR__  . '/build/blocks/*/' ) as $block_type) {
 			register_block_type($block_type);
 		}
 	}

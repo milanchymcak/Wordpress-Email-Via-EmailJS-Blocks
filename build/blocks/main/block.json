@@ -18,7 +18,7 @@
     "emailjs",
     "email.js"
   ],
-  "textdomain": "emailjs-pattern",
+  "textdomain": "emailjs-block",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",

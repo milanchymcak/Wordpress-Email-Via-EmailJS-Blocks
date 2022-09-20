@@ -1,11 +1,11 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
-  "name": "mchymcak/emailjs-textarea",
-  "title": "Textarea Element",
-  "icon": "text",
+  "name": "mchymcak/emailjs-response",
+  "title": "Text (Response) Element",
+  "icon": "heading",
   "example": {},
-  "description": "Textarea of the Contact Form",
+  "description": "Message After Form Submit",
   "category": "text",
   "supports": {
     "html": false

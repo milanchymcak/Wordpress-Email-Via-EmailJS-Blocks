@@ -1,0 +1,22 @@
+.wp-block-mchymcak-emailjs-headline {
+
+	.emailjs-headline {
+		margin-bottom: 15px;
+		padding: 5px 10px;
+		color: #d7d7d7;
+		border: 1px solid #d7d7d7;
+		background: #fff;
+	}
+
+	&.left .emailjs-headline {
+		text-align: left;
+	}
+
+	&.center .emailjs-headline {
+		text-align: center;
+	}
+
+	&.right .emailjs-headline {
+		text-align: right;
+	}
+}

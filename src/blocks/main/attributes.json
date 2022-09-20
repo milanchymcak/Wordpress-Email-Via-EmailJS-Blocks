@@ -1,0 +1,58 @@
+{
+    "public_Key": {
+        "type": "string",
+        "source": "attribute",
+        "selector": "form",
+        "attribute": "data_public_key",
+        "default": ""
+    },
+    "service_ID": {
+        "type": "string",
+        "source": "attribute",
+        "selector": "form",
+        "attribute": "data_service_key",
+        "default": ""
+    }, 
+    "template_ID": {
+        "type": "string",
+        "source": "attribute",
+        "selector": "form",
+        "attribute": "data_template_id",
+        "default": ""
+    },
+    "recaptcha_key": {
+        "type": "string",
+        "source": "attribute",
+        "selector": "form",
+        "attribute": "data_recaptcha_key",
+        "default": ""
+    },
+    "bg_Color": {
+        "type": "string",
+        "source": "attribute",
+        "selector": "div",
+        "attribute": "background-color",
+        "default": "#efefef"
+    },
+    "padding": {
+        "type": "string",
+        "source": "attribute",
+        "selector": "div",
+        "attribute": "padding",
+        "default": "15px"
+    },
+    "border_Color": {
+        "type": "string",
+        "source": "attribute",
+        "selector": "div",
+        "attribute": "border-color",
+        "default": "#d8d8d8"
+    },
+    "border_Width": {
+        "type": "string",
+        "source": "attribute",
+        "selector": "div",
+        "attribute": "border-width",
+        "default": "1px"
+    }
+}

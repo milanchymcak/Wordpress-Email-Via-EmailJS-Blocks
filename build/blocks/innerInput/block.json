@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "mchymcak/emailjs-input",
+  "title": "Input Element",
+  "icon": "edit-large",
+  "description": "Input of the Contact Form",
+  "category": "text",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "emailjs-input",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "parent": [
+    "mchymcak/emailjs-pattern"
+  ]
+}

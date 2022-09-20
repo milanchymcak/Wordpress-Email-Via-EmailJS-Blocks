@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "mchymcak/emailjs-pattern",
+  "version": "0.1.0",
+  "title": "Contact Form - Email.js",
+  "category": "widgets",
+  "icon": "email-alt",
+  "description": "Unofficial implementation of email.js service.",
+  "supports": {
+    "html": false
+  },
+  "keywords": [
+    "email",
+    "contact",
+    "contact form",
+    "emailjs",
+    "email.js"
+  ],
+  "textdomain": "emailjs-pattern",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

@@ -1,0 +1,29 @@
+{
+    "headline": {
+        "type": "string",
+        "source": "attribute",
+        "selector": "div",
+        "attribute": "value",
+        "default": "Contact us"
+    },
+    "textAlign": {
+        "type": "string",
+        "source": "attribute",
+        "selector": "input",
+        "default": "left"
+    },
+    "bg_Color": {
+        "type": "string",
+        "source": "attribute",
+        "selector": "div",
+        "attribute": "background-color",
+        "default": "#efefef"
+    },
+    "color": {
+        "type": "string",
+        "source": "attribute",
+        "selector": "div",
+        "attribute": "color",
+        "default": "#000000"
+    }
+}

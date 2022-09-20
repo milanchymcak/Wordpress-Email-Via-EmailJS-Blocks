@@ -1,0 +1,59 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.emailjs-pattern {
+
+	* {
+		box-sizing: border-box;
+	}
+
+	.wp-block-mchymcak-emailjs-headline {
+		margin-bottom: 15px;
+		padding: 5px;
+	}
+
+	form {
+
+		input {
+			border: 1px solid #d7d7d7;
+			padding: 10px;
+			background: #fff;
+			width: 100%;
+			margin-bottom: 10px;
+		}
+
+		textarea {
+			border: 1px solid #d7d7d7;
+			padding: 10px;
+			background: #fff;
+			width: 100%;
+			margin-bottom: 7px;
+		}
+
+		label {
+			font-size: 13px;
+			margin-bottom: 8px;
+			display: block;
+
+			&.hideLabel {
+				display: none;
+			}
+		}
+
+		button {
+			cursor: pointer;
+
+			&:hover {
+				transform: translateY(-2px);
+			}
+		}
+
+		.g-recaptcha {
+			margin-bottom: 10px;
+		}
+	}
+}

@@ -1,0 +1,80 @@
+{
+    "textarea": {
+        "type": "string",
+        "source": "attribute",
+        "selector": "input",
+        "attribute": "value",
+        "default": "Your message ..."
+    },
+    "hiddenLabel": {
+        "type": "string",
+        "source": "attribute",
+        "default": false
+    },
+    "name": {
+        "type": "string",
+        "source": "attribute",
+        "selector": "textarea",
+        "attribute": "name",
+        "default": "message"
+    },
+    "type": {
+        "type": "string",
+        "source": "attribute",
+        "selector": "textarea",
+        "attribute": "type",
+        "default": "text"
+    },
+    "label": {
+        "type": "string",
+        "source": "attribute",
+        "selector": "label",
+        "default": "Custom Label"
+    },
+    "placeholder": {
+        "type": "string",
+        "source": "attribute",
+        "selector": "textarea",
+        "attribute": "placeholder",
+        "default": "Placeholder"
+    },
+    "label_Color": {
+        "type": "string",
+        "source": "attribute",
+        "selector": "div",
+        "attribute": "color",
+        "default": "#000000"
+    },
+    "input_Color": {
+        "type": "string",
+        "source": "attribute",
+        "selector": "textarea",
+        "attribute": "color",
+        "default": "#000000"
+    },
+    "bg_Color": {
+        "type": "string",
+        "source": "attribute",
+        "selector": "textarea",
+        "attribute": "background-color",
+        "default": "#FFFFFF"
+    },
+    "border_Color": {
+        "type": "string",
+        "source": "attribute",
+        "selector": "textarea",
+        "attribute": "border-color",
+        "default": "#d8d8d8"
+    },
+    "border_Width": {
+        "type": "string",
+        "source": "attribute",
+        "selector": "textarea",
+        "attribute": "border-width",
+        "default": "1px"
+    },
+    "uniqueID": {
+        "type": "string",
+        "source": "attribute"
+    }
+}

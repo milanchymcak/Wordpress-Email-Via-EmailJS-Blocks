@@ -50,10 +50,10 @@ registerBlockType( metadata.name, {
 				<InspectorControls>
 					<PanelBody
 						initialOpen={ false }
-						title={ __( 'Label Settings', 'gutenpride' ) }
+						title={ __( 'Label Settings', 'emailjs-block' ) }
 					>
 						<SelectControl
-							label={ __( 'Hide Label', 'gutenpride' ) }
+							label={ __( 'Hide Label', 'emailjs-block' ) }
 							value={ attributes.hiddenLabel }
 							options={ [
 								{
@@ -72,7 +72,7 @@ registerBlockType( metadata.name, {
 						/>
 						<Divider />
 						<TextControl
-							label={ __( 'Label Content', 'gutenpride' ) }
+							label={ __( 'Label Content', 'emailjs-block' ) }
 							value={ attributes.label }
 							onChange={ ( val ) =>
 								setAttributes( { label: val } )
@@ -82,25 +82,25 @@ registerBlockType( metadata.name, {
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Label Text Color', 'gutenpride' ) }
+							label={ __( 'Label Text Color', 'emailjs-block' ) }
 							target="label_Color"
 							default={ attributes.label_Color }
 						/>
 					</PanelBody>
 					<PanelBody
 						initialOpen={ false }
-						title={ __( 'Input Settings', 'gutenpride' ) }
+						title={ __( 'Input Settings', 'emailjs-block' ) }
 					>
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Input Text Color', 'gutenpride' ) }
+							label={ __( 'Input Text Color', 'emailjs-block' ) }
 							target="input_Color"
 							default={ attributes.input_Color }
 						/>
 						<Divider />
 						<TextControl
-							label={ __( 'Name Attribute', 'gutenpride' ) }
+							label={ __( 'Name Attribute', 'emailjs-block' ) }
 							value={ attributes.name }
 							onChange={ ( val ) =>
 								setAttributes( { name: val } )
@@ -108,7 +108,7 @@ registerBlockType( metadata.name, {
 						/>
 						<Divider />
 						<TextControl
-							label={ __( 'Type Attribute', 'gutenpride' ) }
+							label={ __( 'Type Attribute', 'emailjs-block' ) }
 							value={ attributes.type }
 							onChange={ ( val ) =>
 								setAttributes( { type: val } )
@@ -118,7 +118,7 @@ registerBlockType( metadata.name, {
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Background Color', 'gutenpride' ) }
+							label={ __( 'Background Color', 'emailjs-block' ) }
 							target="bg_Color"
 							default={ attributes.bg_Color }
 						/>
@@ -126,13 +126,13 @@ registerBlockType( metadata.name, {
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Border Color', 'gutenpride' ) }
+							label={ __( 'Border Color', 'emailjs-block' ) }
 							target="border_Color"
 							default={ attributes.border_Color }
 						/>
 						<Divider />
 						<RangeControl
-							label={ __( 'Border Width', 'gutenpride' ) }
+							label={ __( 'Border Width', 'emailjs-block' ) }
 							value={ attributes.border_Width }
 							onChange={ ( val ) =>
 								setAttributes( { border_Width: val } )

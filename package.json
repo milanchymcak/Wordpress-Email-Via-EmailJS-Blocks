@@ -6,7 +6,7 @@
 	"license": "GPL-2.0-or-later",
 	"keywords": ["Emailjs", "Contact Form"],
 	"homepage": "https://chymcakmilan.com",
-	"repository": "",
+	"repository": "https://github.com/milanchymcak/emailjs-gutenberg/",
 	"bugs": {
 		"url" : "https://github.com/milanchymcak/emailjs-gutenberg/issues",
 		"email" : "contact@chymcakmilan.com"

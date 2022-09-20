@@ -8,8 +8,8 @@
 	"homepage": "https://chymcakmilan.com",
 	"repository": "",
 	"bugs": {
-		"url" : "https://github.com/owner/project/issues",
-		"email" : "project@hostname.com"
+		"url" : "https://github.com/milanchymcak/emailjs-gutenberg/issues",
+		"email" : "contact@chymcakmilan.com"
 	},
 	"main": "build/index.js",
 	"devDependencies": {

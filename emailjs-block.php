@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Emailjs Gutenberg Block
- * Description:       Add Emailjs Contact Form
+ * Description:       Emailjs Contact Form - Send emails from WordPress without mail server through emailjs.com API
  * Requires at least: 8.0
  * Requires PHP:      8.0
  * Version:           0.1.0

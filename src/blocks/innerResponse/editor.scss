@@ -1,0 +1,23 @@
+.wp-block-mchymcak-emailjs-response {
+
+	.emailjs-response {
+		margin: 10px 0px;
+		padding: 5px 10px;
+
+		&:focus {
+			border: 1px solid #d7d7d7;
+		}
+	}
+
+	&.left .emailjs-response {
+		text-align: left;
+	}
+
+	&.center .emailjs-response {
+		text-align: center;
+	}
+
+	&.right .emailjs-response {
+		text-align: right;
+	}
+}

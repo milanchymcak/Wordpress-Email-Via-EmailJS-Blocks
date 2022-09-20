@@ -109,12 +109,11 @@ registerBlockType( metadata.name, {
 					<RichText
 						id={ randomID }
 						tagName="div"
-						value={ attributes.headline }
-						onChange={ ( headline ) =>
-							setAttributes( { headline } )
+						value={ attributes.message }
+						onChange={ ( message ) =>
+							setAttributes( { message } )
 						}
-						placeholder={ __( 'Contact Us', 'emailjs-block' ) }
-						className="emailjs-headline"
+						className="emailjs-response"
 						style={ {
 							color: attributes.color,
 							backgroundColor: attributes.bg_Color,
@@ -138,7 +137,7 @@ registerBlockType( metadata.name, {
 			>
 				<RichText.Content
 					{ ...useBlockProps.save() }
-					value={ attributes.headline }
+					value={ attributes.message }
 				/>
 			</div>
 		);

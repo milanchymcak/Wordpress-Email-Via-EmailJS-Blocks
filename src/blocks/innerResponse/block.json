@@ -1,11 +1,11 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
-	"name": "mchymcak/emailjs-headline",
-	"title": "Headline Element",
+	"name": "mchymcak/emailjs-response",
+	"title": "Text (Response) Element",
 	"icon": "heading",
 	"example": {},
-	"description": "Head of the Contact Form",
+	"description": "Message After Form Submit",
 	"category": "text",
 	"supports": {
 		"html": false

@@ -34,7 +34,7 @@ const mainTemplate = [
 	[
 		'mchymcak/emailjs-headline',
 		{
-			headline: 'Feel free to message us!',
+			headline: __( 'Feel free to message us', 'emailjs-block' ),
 		},
 	],
 	[
@@ -42,7 +42,7 @@ const mainTemplate = [
 		{
 			name: 'user_name',
 			type: 'name',
-			label: 'Full Name',
+			label: __( 'Full Name', 'emailjs-block' ),
 			placeholder: 'John Snow',
 		},
 	],
@@ -51,20 +51,26 @@ const mainTemplate = [
 		{
 			name: 'user_email',
 			type: 'email',
-			label: 'Your Email',
+			label: __( 'Your Email', 'emailjs-block' ),
 			placeholder: 'email@email.com',
 		},
 	],
 	[
 		'mchymcak/emailjs-textarea',
 		{
-			label: 'Your Message',
+			label: __( 'Your Message', 'emailjs-block' ),
 		},
 	],
 	[
 		'mchymcak/emailjs-button',
 		{
 			type: 'submit',
+		},
+	],
+	[
+		'mchymcak/emailjs-response',
+		{
+			message: __( 'Thank you for your message!', 'emailjs-block' ),
 		},
 	],
 ];
@@ -91,23 +97,23 @@ registerBlockType( metadata.name, {
 		return (
 			<>
 				<InspectorControls>
-					<PanelBody title={ __( 'EmailJS Settings', 'gutenpride' ) }>
+					<PanelBody title={ __( 'EmailJS Settings', 'emailjs-block' ) }>
 						<TextControl
-							label={ __( 'Public Key', 'gutenpride' ) }
+							label={ __( 'Public Key', 'emailjs-block' ) }
 							value={ attributes.public_Key }
 							onChange={ ( val ) =>
 								setAttributes( { public_Key: val } )
 							}
 						/>
 						<TextControl
-							label={ __( 'Template ID', 'gutenpride' ) }
+							label={ __( 'Template ID', 'emailjs-block' ) }
 							value={ attributes.template_ID }
 							onChange={ ( val ) =>
 								setAttributes( { template_ID: val } )
 							}
 						/>
 						<TextControl
-							label={ __( 'Service ID', 'gutenpride' ) }
+							label={ __( 'Service ID', 'emailjs-block' ) }
 							value={ attributes.service_ID }
 							onChange={ ( val ) =>
 								setAttributes( { service_ID: val } )
@@ -116,7 +122,7 @@ registerBlockType( metadata.name, {
 						<TextControl
 							label={ __(
 								'Recaptcha Key (optional)',
-								'gutenpride'
+								'emailjs-block'
 							) }
 							value={ attributes.recaptcha_key }
 							onChange={ ( val ) =>
@@ -126,18 +132,18 @@ registerBlockType( metadata.name, {
 					</PanelBody>
 					<PanelBody
 						initialOpen={ false }
-						title={ __( 'Contact Form Settings', 'gutenpride' ) }
+						title={ __( 'Contact Form Settings', 'emailjs-block' ) }
 					>
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Background Color', 'gutenpride' ) }
+							label={ __( 'Background Color', 'emailjs-block' ) }
 							target="bg_Color"
 							default={ attributes.bg_Color }
 						/>
 						<Divider />
 						<RangeControl
-							label={ __( 'Padding', 'gutenpride' ) }
+							label={ __( 'Padding', 'emailjs-block' ) }
 							value={ attributes.padding }
 							onChange={ ( val ) =>
 								setAttributes( { padding: val } )
@@ -151,13 +157,13 @@ registerBlockType( metadata.name, {
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Border Color', 'gutenpride' ) }
+							label={ __( 'Border Color', 'emailjs-block' ) }
 							target="border_Color"
 							default={ attributes.border_Color }
 						/>
 						<Divider />
 						<RangeControl
-							label={ __( 'Border Width', 'gutenpride' ) }
+							label={ __( 'Border Width', 'emailjs-block' ) }
 							value={ attributes.border_Width }
 							onChange={ ( val ) =>
 								setAttributes( { border_Width: val } )

@@ -39,17 +39,17 @@ registerBlockType( metadata.name, {
 		// Default Font Sizes
 		const fontSizes = [
 			{
-				name: __( 'Small' ),
+				name: __( 'Small', 'emailjs-block' ),
 				slug: 'small',
 				size: 12,
 			},
 			{
-				name: __( 'Medium' ),
+				name: __( 'Medium', 'emailjs-block' ),
 				slug: 'Medium',
 				size: 19,
 			},
 			{
-				name: __( 'Big' ),
+				name: __( 'Big', 'emailjs-block' ),
 				slug: 'big',
 				size: 26,
 			},
@@ -60,12 +60,12 @@ registerBlockType( metadata.name, {
 				<InspectorControls>
 					<PanelBody
 						initialOpen={ false }
-						title={ __( 'Design Settings', 'gutenpride' ) }
+						title={ __( 'Design Settings', 'emailjs-block' ) }
 					>
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Text Color', 'gutenpride' ) }
+							label={ __( 'Text Color', 'emailjs-block' ) }
 							target="text_Color"
 							default={ attributes.text_Color }
 						/>
@@ -73,13 +73,13 @@ registerBlockType( metadata.name, {
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Background Color', 'gutenpride' ) }
+							label={ __( 'Background Color', 'emailjs-block' ) }
 							target="bg_Color"
 							default={ attributes.bg_Color }
 						/>
 						<Divider />
 						<RangeControl
-							label={ __( 'Padding Horizontally', 'gutenpride' ) }
+							label={ __( 'Padding Horizontally', 'emailjs-block' ) }
 							value={ attributes.padding_hor }
 							onChange={ ( val ) =>
 								setAttributes( { padding_hor: val } )
@@ -91,7 +91,7 @@ registerBlockType( metadata.name, {
 						/>
 						<Divider />
 						<RangeControl
-							label={ __( 'Padding Vertically', 'gutenpride' ) }
+							label={ __( 'Padding Vertically', 'emailjs-block' ) }
 							value={ attributes.padding_vert }
 							onChange={ ( val ) =>
 								setAttributes( { padding_vert: val } )
@@ -105,13 +105,13 @@ registerBlockType( metadata.name, {
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Border Color', 'gutenpride' ) }
+							label={ __( 'Border Color', 'emailjs-block' ) }
 							target="border_Color"
 							default={ attributes.border_Color }
 						/>
 						<Divider />
 						<RangeControl
-							label={ __( 'Border Width', 'gutenpride' ) }
+							label={ __( 'Border Width', 'emailjs-block' ) }
 							value={ attributes.border_Width }
 							onChange={ ( val ) =>
 								setAttributes( { border_Width: val } )
@@ -124,10 +124,10 @@ registerBlockType( metadata.name, {
 					</PanelBody>
 					<PanelBody
 						initialOpen={ false }
-						title={ __( 'Button Settings', 'gutenpride' ) }
+						title={ __( 'Button Settings', 'emailjs-block' ) }
 					>
 						<TextControl
-							label={ __( 'Type Attribute', 'gutenpride' ) }
+							label={ __( 'Type Attribute', 'emailjs-block' ) }
 							value={ attributes.type }
 							onChange={ ( val ) =>
 								setAttributes( { type: val } )
@@ -136,7 +136,7 @@ registerBlockType( metadata.name, {
 					</PanelBody>
 					<PanelBody
 						initialOpen={ false }
-						title={ __( 'Typography', 'gutenpride' ) }
+						title={ __( 'Typography', 'emailjs-block' ) }
 					>
 						<FontSizePicker
 							__nextHasNoMarginBottom

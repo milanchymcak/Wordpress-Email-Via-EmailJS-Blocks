@@ -32,10 +32,10 @@ import './editor.scss';
  * Internal Data
  */
 import metadata from './block.json';
-import defaultAttributes from './attributes.json';
+import getAttributes from './attributes.json';
 
 registerBlockType( metadata.name, {
-	defaultAttributes,
+	attributes: getAttributes,
 	edit: ( props ) => {
 		// Get Unique ID of the Block
 		const uniqueID = props.clientId;
@@ -53,7 +53,10 @@ registerBlockType( metadata.name, {
 		return (
 			<>
 				<InspectorControls>
-					<PanelBody title={ __( 'Label Settings', 'gutenpride' ) }>
+					<PanelBody
+						initialOpen={ false }
+						title={ __( 'Label Settings', 'gutenpride' ) }
+					>
 						<SelectControl
 							label={ __( 'Hide Label', 'gutenpride' ) }
 							value={ attributes.hiddenLabel }
@@ -97,7 +100,10 @@ registerBlockType( metadata.name, {
 							default={ attributes.bg_Color }
 						/>
 					</PanelBody>
-					<PanelBody title={ __( 'Input Settings', 'gutenpride' ) }>
+					<PanelBody
+						initialOpen={ false }
+						title={ __( 'Input Settings', 'gutenpride' ) }
+					>
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }

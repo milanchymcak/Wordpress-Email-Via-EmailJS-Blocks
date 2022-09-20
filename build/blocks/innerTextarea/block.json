@@ -4,6 +4,7 @@
   "name": "mchymcak/emailjs-textarea",
   "title": "Textarea Element",
   "icon": "text",
+  "example": {},
   "description": "Textarea of the Contact Form",
   "category": "text",
   "supports": {

@@ -1,6 +1,11 @@
 import { registerBlockType } from '@wordpress/blocks';
 import { __ } from '@wordpress/i18n';
-import { TextControl, PanelBody, RangeControl } from '@wordpress/components';
+import {
+	TextControl,
+	PanelBody,
+	RangeControl,
+	FontSizePicker,
+} from '@wordpress/components';
 import {
 	useBlockProps,
 	InspectorControls,
@@ -24,17 +29,39 @@ import './editor.scss';
  * Internal Data
  */
 import metadata from './block.json';
-import defaultAttributes from './attributes.json';
+import getAttributes from './attributes.json';
 
 registerBlockType( metadata.name, {
-	defaultAttributes,
+	attributes: getAttributes,
 	edit: ( props ) => {
 		const { attributes, setAttributes } = props;
+
+		// Default Font Sizes
+		const fontSizes = [
+			{
+				name: __( 'Small' ),
+				slug: 'small',
+				size: 12,
+			},
+			{
+				name: __( 'Medium' ),
+				slug: 'Medium',
+				size: 19,
+			},
+			{
+				name: __( 'Big' ),
+				slug: 'big',
+				size: 26,
+			},
+		];
 
 		return (
 			<>
 				<InspectorControls>
-					<PanelBody title={ __( 'Design Settings', 'gutenpride' ) }>
+					<PanelBody
+						initialOpen={ false }
+						title={ __( 'Design Settings', 'gutenpride' ) }
+					>
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
@@ -95,13 +122,31 @@ registerBlockType( metadata.name, {
 							renderTooltipContent={ ( value ) => value + 'px' }
 						/>
 					</PanelBody>
-					<PanelBody title={ __( 'Button Settings', 'gutenpride' ) }>
+					<PanelBody
+						initialOpen={ false }
+						title={ __( 'Button Settings', 'gutenpride' ) }
+					>
 						<TextControl
 							label={ __( 'Type Attribute', 'gutenpride' ) }
 							value={ attributes.type }
 							onChange={ ( val ) =>
 								setAttributes( { type: val } )
 							}
+						/>
+					</PanelBody>
+					<PanelBody
+						initialOpen={ false }
+						title={ __( 'Typography', 'gutenpride' ) }
+					>
+						<FontSizePicker
+							__nextHasNoMarginBottom
+							withSlider
+							fallbackFontSize={ 18 }
+							fontSizes={ fontSizes }
+							value={ attributes.fontSize }
+							onChange={ ( val ) => {
+								setAttributes( { fontSize: val } );
+							} }
 						/>
 					</PanelBody>
 				</InspectorControls>
@@ -126,6 +171,7 @@ registerBlockType( metadata.name, {
 							borderColor: attributes.border_Color,
 							borderWidth: attributes.border_Width,
 							color: attributes.text_Color,
+							fontSize: attributes.fontSize,
 						} }
 					/>
 				</div>
@@ -145,6 +191,7 @@ registerBlockType( metadata.name, {
 					borderColor: attributes.border_Color,
 					borderWidth: attributes.border_Width,
 					color: attributes.text_Color,
+					fontSize: attributes.fontSize,
 				} }
 			>
 				{ attributes.button }

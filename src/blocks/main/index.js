@@ -25,7 +25,7 @@ import './style.scss';
  * Internal Data
  */
 import metadata from './block.json';
-import defaultAttributes from './attributes.json';
+import getAttributes from './attributes.json';
 
 /**
  * InnerBlocks Template
@@ -34,7 +34,7 @@ const mainTemplate = [
 	[
 		'mchymcak/emailjs-headline',
 		{
-			headline: 'Contact Us',
+			headline: 'Feel free to message us!',
 		},
 	],
 	[
@@ -85,13 +85,47 @@ const allowedBlocks = [
  * InnerBlocks Allowed Blocks
  */
 registerBlockType( metadata.name, {
-	defaultAttributes,
+	attributes: getAttributes,
 	edit: ( props ) => {
 		const { attributes, setAttributes } = props;
 		return (
 			<>
 				<InspectorControls>
+					<PanelBody title={ __( 'EmailJS Settings', 'gutenpride' ) }>
+						<TextControl
+							label={ __( 'Public Key', 'gutenpride' ) }
+							value={ attributes.public_Key }
+							onChange={ ( val ) =>
+								setAttributes( { public_Key: val } )
+							}
+						/>
+						<TextControl
+							label={ __( 'Template ID', 'gutenpride' ) }
+							value={ attributes.template_ID }
+							onChange={ ( val ) =>
+								setAttributes( { template_ID: val } )
+							}
+						/>
+						<TextControl
+							label={ __( 'Service ID', 'gutenpride' ) }
+							value={ attributes.service_ID }
+							onChange={ ( val ) =>
+								setAttributes( { service_ID: val } )
+							}
+						/>
+						<TextControl
+							label={ __(
+								'Recaptcha Key (optional)',
+								'gutenpride'
+							) }
+							value={ attributes.recaptcha_key }
+							onChange={ ( val ) =>
+								setAttributes( { recaptcha_key: val } )
+							}
+						/>
+					</PanelBody>
 					<PanelBody
+						initialOpen={ false }
 						title={ __( 'Contact Form Settings', 'gutenpride' ) }
 					>
 						<NewColorPalette
@@ -132,39 +166,6 @@ registerBlockType( metadata.name, {
 							max={ 10 }
 							initialPosition={ 1 }
 							renderTooltipContent={ ( value ) => value + 'px' }
-						/>
-					</PanelBody>
-					<PanelBody title={ __( 'EmailJS Settings', 'gutenpride' ) }>
-						<TextControl
-							label={ __( 'Public Key', 'gutenpride' ) }
-							value={ attributes.public_Key }
-							onChange={ ( val ) =>
-								setAttributes( { public_Key: val } )
-							}
-						/>
-						<TextControl
-							label={ __( 'Template ID', 'gutenpride' ) }
-							value={ attributes.template_ID }
-							onChange={ ( val ) =>
-								setAttributes( { template_ID: val } )
-							}
-						/>
-						<TextControl
-							label={ __( 'Service ID', 'gutenpride' ) }
-							value={ attributes.service_ID }
-							onChange={ ( val ) =>
-								setAttributes( { service_ID: val } )
-							}
-						/>
-						<TextControl
-							label={ __(
-								'Recaptcha Key (optional)',
-								'gutenpride'
-							) }
-							value={ attributes.recaptcha_key }
-							onChange={ ( val ) =>
-								setAttributes( { recaptcha_key: val } )
-							}
 						/>
 					</PanelBody>
 				</InspectorControls>

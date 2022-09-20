@@ -1,6 +1,6 @@
 import { registerBlockType } from '@wordpress/blocks';
 import { __ } from '@wordpress/i18n';
-import { PanelBody, BaseControl } from '@wordpress/components';
+import { PanelBody, FontSizePicker } from '@wordpress/components';
 import {
 	useBlockProps,
 	InspectorControls,
@@ -26,20 +26,42 @@ import './editor.scss';
  * Internal Data
  */
 import metadata from './block.json';
-import defaultAttributes from './attributes.json';
+import getAttributes from './attributes.json';
 
 registerBlockType( metadata.name, {
-	defaultAttributes,
+	attributes: getAttributes,
 	edit: ( props ) => {
 		const { attributes, setAttributes } = props;
 
 		// Get Unique ID for the <BaseControl>
 		const randomID = randomString();
 
+		// Default Font Sizes
+		const fontSizes = [
+			{
+				name: __( 'Small' ),
+				slug: 'small',
+				size: 12,
+			},
+			{
+				name: __( 'Medium' ),
+				slug: 'Medium',
+				size: 19,
+			},
+			{
+				name: __( 'Big' ),
+				slug: 'big',
+				size: 26,
+			},
+		];
+
 		return (
 			<>
 				<InspectorControls>
-					<PanelBody title={ __( 'Color Settings', 'gutenpride' ) }>
+					<PanelBody
+						initialOpen={ false }
+						title={ __( 'Color Settings', 'gutenpride' ) }
+					>
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
@@ -56,6 +78,21 @@ registerBlockType( metadata.name, {
 							default={ attributes.bg_Color }
 						/>
 					</PanelBody>
+					<PanelBody
+						initialOpen={ false }
+						title={ __( 'Typography', 'gutenpride' ) }
+					>
+						<FontSizePicker
+							__nextHasNoMarginBottom
+							withSlider
+							fallbackFontSize={ 19 }
+							fontSizes={ fontSizes }
+							value={ attributes.fontSize }
+							onChange={ ( val ) => {
+								setAttributes( { fontSize: val } );
+							} }
+						/>
+					</PanelBody>
 				</InspectorControls>
 				<BlockControls>
 					<AlignmentControl
@@ -69,28 +106,21 @@ registerBlockType( metadata.name, {
 				<div
 					{ ...useBlockProps( { className: attributes.textAlign } ) }
 				>
-					<BaseControl
+					<RichText
 						id={ randomID }
-						label={
-							"Enter Contact Form Title: default is 'Contact Us'"
+						tagName="div"
+						value={ attributes.headline }
+						onChange={ ( headline ) =>
+							setAttributes( { headline } )
 						}
-						__nextHasNoMarginBottom={ true }
-					>
-						<RichText
-							id={ randomID }
-							tagName="div"
-							value={ attributes.headline }
-							onChange={ ( headline ) =>
-								setAttributes( { headline } )
-							}
-							placeholder={ __( 'Contact Us…' ) }
-							className="emailjs-headline"
-							style={ {
-								color: attributes.color,
-								backgroundColor: attributes.bg_Color,
-							} }
-						/>
-					</BaseControl>
+						placeholder={ __( 'Contact Us…' ) }
+						className="emailjs-headline"
+						style={ {
+							color: attributes.color,
+							backgroundColor: attributes.bg_Color,
+							fontSize: attributes.fontSize,
+						} }
+					/>
 				</div>
 			</>
 		);
@@ -103,6 +133,7 @@ registerBlockType( metadata.name, {
 					textAlign: attributes.textAlign,
 					color: attributes.color,
 					backgroundColor: attributes.bg_Color,
+					fontSize: attributes.fontSize,
 				} }
 			>
 				<RichText.Content

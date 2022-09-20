@@ -10,7 +10,7 @@
         "type": "string",
         "source": "attribute",
         "selector": "input",
-        "default": "left"
+        "default": "center"
     },
     "bg_Color": {
         "type": "string",
@@ -25,5 +25,12 @@
         "selector": "div",
         "attribute": "color",
         "default": "#000000"
+    },
+    "fontSize": {
+        "type": "string",
+        "source": "attribute",
+        "selector": "div",
+        "attribute": "font-size",
+        "default": "19"
     }
 }

@@ -4,6 +4,7 @@
   "name": "mchymcak/emailjs-button",
   "title": "Button Element",
   "icon": "button",
+  "example": {},
   "description": "Button of the Contact Form",
   "category": "text",
   "supports": {

@@ -6,6 +6,7 @@
 	"title": "Contact Form - Email.js",
 	"category": "widgets",
 	"icon": "email-alt",
+	"example": {},
 	"description": "Unofficial implementation of email.js service.",
 	"supports": {
 		"html": false

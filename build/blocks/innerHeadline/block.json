@@ -4,6 +4,7 @@
   "name": "mchymcak/emailjs-headline",
   "title": "Headline Element",
   "icon": "heading",
+  "example": {},
   "description": "Head of the Contact Form",
   "category": "text",
   "supports": {

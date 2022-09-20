@@ -4,7 +4,7 @@ import { randomString } from '.././utils/randomString';
 
 export default function NewColorPalette( props ) {
 	const [ color, setColor ] = useState(
-		props.default === undefined ? '#FFFF' : props.default
+		props.default === undefined ? '#fff' : props.default
 	);
 
 	const randomID = randomString();

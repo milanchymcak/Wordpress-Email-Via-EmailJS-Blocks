@@ -53,5 +53,12 @@
         "selector": "button",
         "attribute": "border-width",
         "default": "1px"
+    },
+    "fontSize": {
+        "type": "string",
+        "source": "attribute",
+        "selector": "button",
+        "attribute": "font-size",
+        "default": "18"
     }
 }

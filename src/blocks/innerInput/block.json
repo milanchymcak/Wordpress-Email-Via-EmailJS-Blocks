@@ -4,6 +4,7 @@
 	"name": "mchymcak/emailjs-input",
 	"title": "Input Element",
 	"icon": "edit-large",
+	"example": {},
 	"description": "Input of the Contact Form",
 	"category": "text",
 	"supports": {

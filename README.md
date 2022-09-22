@@ -3,6 +3,8 @@ WP Contact Form - Send emails from WordPress without a mail server through email
 
 # Download
 
+[Download here](https://github.com/milanchymcak/emailjs-gutenberg/releases/tag/alpha)
+
 # Prerequisite
 
 First, you need to have an active EmailJS account. [Register for free](https://www.emailjs.com/)

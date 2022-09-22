@@ -126,9 +126,11 @@ registerBlockType( metadata.name, {
 		);
 	},
 	save: ( { attributes } ) => {
+		const blockProps = useBlockProps.save();
+
 		return (
 			<div
-				{ ...useBlockProps.save() }
+				{ ...blockProps }
 				style={ {
 					textAlign: attributes.textAlign,
 					color: attributes.color,
@@ -137,7 +139,7 @@ registerBlockType( metadata.name, {
 				} }
 			>
 				<RichText.Content
-					{ ...useBlockProps.save() }
+					{ ...blockProps }
 					value={ attributes.headline }
 				/>
 			</div>

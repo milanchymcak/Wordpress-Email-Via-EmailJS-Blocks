@@ -1,80 +1,68 @@
 {
     "hiddenLabel": {
         "type": "string",
-        "source": "attribute",
         "default": false
     },
     "name": {
         "type": "string",
-        "source": "attribute",
         "selector": "input",
         "attribute": "name",
         "default": "message"
     },
     "type": {
         "type": "string",
-        "source": "attribute",
         "selector": "input",
         "attribute": "type",
         "default": "text"
     },
     "label": {
         "type": "string",
-        "source": "attribute",
         "selector": "label",
         "default": "Custom Label"
     },
     "placeholder": {
         "type": "string",
-        "source": "attribute",
         "selector": "input",
         "attribute": "placeholder",
         "default": "Placeholder"
     },
     "label_Color": {
         "type": "string",
-        "source": "attribute",
         "selector": "label",
         "attribute": "color",
         "default": "#000000"
     },
     "input_Color": {
         "type": "string",
-        "source": "attribute",
         "selector": "input",
         "attribute": "color",
         "default": "#000000"
     },
     "bg_Color": {
         "type": "string",
-        "source": "attribute",
         "selector": "input",
         "attribute": "background-color",
         "default": "#FFFFFF"
     },
     "border_Color": {
         "type": "string",
-        "source": "attribute",
         "selector": "input",
         "attribute": "border-color",
         "default": "#d8d8d8"
     },
     "border_Width": {
         "type": "string",
-        "source": "attribute",
         "selector": "input",
         "attribute": "border-width",
         "default": "1px"
     },
     "input": {
         "type": "string",
-        "source": "text",
         "selector": "input",
         "attribute": "value",
         "default": ""
     },  
     "uniqueID": {
-        "type": "string",
-        "source": "attribute"
+        "type": "string"
     }
 }

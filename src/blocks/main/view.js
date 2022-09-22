@@ -29,36 +29,60 @@ window.addEventListener( 'load', () => {
 			}
 		}
 
-		// Add CDN Script
-		const cdn = document.createElement( 'script' );
-		cdn.type = 'text/javascript';
-		cdn.src =
-			'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
-		cdn.onload = () => {
-			( function () {
-				// Start emailjs
-				emailjs.init( EmailjsForm.getAttribute( 'data-public-key' ) );
+		// Get Response Target
+		const EmailsjsTarget = EmailsjsForm.querySelector(
+			'.wp-block-mchymcak-emailjs-response'
+		);
 
-				// On Submit Handler
-				EmailjsForm.onsubmit = ( form ) => {
-					form.preventDefault();
-					emailjs
-						.sendForm(
-							EmailjsForm.getAttribute( 'data-service-key' ),
-							EmailjsForm.getAttribute( 'data-template-id' ),
-							'#emailjs-form'
-						)
-						.then(
-							function ( response ) {
-								// Success
-							},
-							function ( error ) {
-								// Fail
-							}
-						);
-				};
-			} )();
-		};
-		document.head.appendChild( cdn );
+		if ( EmailsjsTarget !== undefined && EmailsjsTarget !== null ) {
+			// Add CDN Script
+			const cdn = document.createElement( 'script' );
+			cdn.type = 'text/javascript';
+			cdn.src =
+				'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+			cdn.onload = () => {
+				( function () {
+					// Start emailjs
+					emailjs.init(
+						EmailjsForm.getAttribute( 'data-public-key' )
+					);
+
+					// On Submit Handler
+					EmailjsForm.onsubmit = ( form ) => {
+						// Prevent Form From Submitting
+						form.preventDefault();
+
+						// Show The Response Message
+						EmailsjsTarget.classList.toggle( 'show' );
+
+						// Submit Message & Get Response
+						emailjs
+							.sendForm(
+								EmailjsForm.getAttribute( 'data-service-key' ),
+								EmailjsForm.getAttribute( 'data-template-id' ),
+								'#emailjs-form'
+							)
+							.then(
+								// Sucess Message
+								function () {
+									// Fallback Success Message If Not Provided
+									if (
+										EmailsjsTarget.childNodes.length === 0
+									) {
+										EmailsjsTarget.textContent =
+											'Thank you!';
+									}
+								},
+								// Fail Message
+								function ( error ) {
+									EmailsjsTarget.textContent( error );
+								}
+							);
+					};
+				} )();
+			};
+
+			document.head.appendChild( cdn );
+		}
 	}
 } );

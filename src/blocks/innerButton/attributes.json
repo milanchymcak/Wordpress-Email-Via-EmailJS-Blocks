@@ -1,62 +1,53 @@
 {
     "button": {
         "type": "string",
-        "source": "attribute",
         "selector": "button",
         "default": "Send"
     },
     "type": {
         "type": "string",
-        "source": "attribute",
         "selector": "button",
         "attribute": "type",
         "default": "submit"
     },
     "bg_Color": {
         "type": "string",
-        "source": "attribute",
         "selector": "button",
         "attribute": "background-color",
         "default": "#efefef"
     },
     "text_Color": {
         "type": "string",
-        "source": "attribute",
         "selector": "button",
         "attribute": "color",
         "default": "#000000"
     },
     "padding_vert": {
         "type": "string",
-        "source": "attribute",
         "selector": "button",
         "attribute": "padding-top",
         "default": "5px"
     },
     "padding_hor": {
         "type": "string",
-        "source": "attribute",
         "selector": "button",
         "attribute": "padding-left",
         "default": "15px"
     },
     "border_Color": {
         "type": "string",
-        "source": "attribute",
         "selector": "button",
         "attribute": "border-color",
         "default": "#d8d8d8"
     },
     "border_Width": {
         "type": "string",
-        "source": "attribute",
         "selector": "button",
         "attribute": "border-width",
         "default": "1px"
     },
     "fontSize": {
         "type": "string",
-        "source": "attribute",
         "selector": "button",
         "attribute": "font-size",
         "default": "18"

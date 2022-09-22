@@ -5,6 +5,7 @@ import {
 	useBlockProps,
 	InspectorControls,
 	BlockControls,
+	BlockAlignmentToolbar,
 	InnerBlocks,
 } from '@wordpress/block-editor';
 import NewColorPalette from '../.././components/NewColorPalette';
@@ -97,7 +98,9 @@ registerBlockType( metadata.name, {
 		return (
 			<>
 				<InspectorControls>
-					<PanelBody title={ __( 'EmailJS Settings', 'emailjs-block' ) }>
+					<PanelBody
+						title={ __( 'EmailJS Settings', 'emailjs-block' ) }
+					>
 						<TextControl
 							label={ __( 'Public Key', 'emailjs-block' ) }
 							value={ attributes.public_Key }
@@ -184,7 +187,14 @@ registerBlockType( metadata.name, {
 						borderWidth: attributes.border_Width,
 					} }
 				>
-					<BlockControls group="block" />
+					<BlockControls group="block">
+						<BlockAlignmentToolbar
+							value={ attributes.blockAlign }
+							onChange={ ( blockAlign ) => {
+								setAttributes( { blockAlign } );
+							} }
+						/>
+					</BlockControls>
 					<InnerBlocks
 						template={ mainTemplate }
 						allowedBlocks={ allowedBlocks }
@@ -207,6 +217,8 @@ registerBlockType( metadata.name, {
 			>
 				<div id="emails-response"></div>
 				<form
+					action="#"
+					method="post"
 					id="emailjs-form"
 					data-public-key={ attributes.public_Key }
 					data-service-key={ attributes.service_ID }

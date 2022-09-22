@@ -199,11 +199,16 @@ registerBlockType( metadata.name, {
 			</>
 		);
 	},
-	save: ( { attributes } ) => {
+	save: ( props ) => {
+		// Get Unique ID of the Block
+		const uniqueID = props.clientId;
+
+		const { attributes } = props;
+
 		return (
 			<>
 				<label
-					htmlFor={ attributes.uniqueID }
+					htmlFor={ uniqueID }
 					className={
 						attributes.hiddenLabel === 'true'
 							? 'hideLabel'
@@ -216,7 +221,7 @@ registerBlockType( metadata.name, {
 					{ attributes.label }
 				</label>
 				<RichText.Content
-					for={ attributes.uniqueID }
+					id={ uniqueID }
 					tagName="input"
 					type={ attributes.type }
 					placeholder={ attributes.placeholder }

@@ -26,12 +26,14 @@ import './editor.scss';
  * Internal Data
  */
 import metadata from './block.json';
-import getAttributes from './attributes.json';
+import attributes from './attributes.json';
 
 registerBlockType( metadata.name, {
-	attributes: getAttributes,
+	attributes,
 	edit: ( props ) => {
 		const { attributes, setAttributes } = props;
+
+		console.log( attributes );
 
 		// Get Unique ID for the <BaseControl>
 		const randomID = randomString();
@@ -110,9 +112,7 @@ registerBlockType( metadata.name, {
 						id={ randomID }
 						tagName="div"
 						value={ attributes.message }
-						onChange={ ( message ) =>
-							setAttributes( { message } )
-						}
+						onChange={ ( message ) => setAttributes( { message } ) }
 						className="emailjs-response"
 						style={ {
 							color: attributes.color,
@@ -125,6 +125,7 @@ registerBlockType( metadata.name, {
 		);
 	},
 	save: ( { attributes } ) => {
+		console.log( attributes );
 		return (
 			<div
 				{ ...useBlockProps.save() }

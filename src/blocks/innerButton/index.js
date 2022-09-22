@@ -79,7 +79,10 @@ registerBlockType( metadata.name, {
 						/>
 						<Divider />
 						<RangeControl
-							label={ __( 'Padding Horizontally', 'emailjs-block' ) }
+							label={ __(
+								'Padding Horizontally',
+								'emailjs-block'
+							) }
 							value={ attributes.padding_hor }
 							onChange={ ( val ) =>
 								setAttributes( { padding_hor: val } )
@@ -91,7 +94,10 @@ registerBlockType( metadata.name, {
 						/>
 						<Divider />
 						<RangeControl
-							label={ __( 'Padding Vertically', 'emailjs-block' ) }
+							label={ __(
+								'Padding Vertically',
+								'emailjs-block'
+							) }
 							value={ attributes.padding_vert }
 							onChange={ ( val ) =>
 								setAttributes( { padding_vert: val } )

@@ -26,14 +26,12 @@ import './editor.scss';
  * Internal Data
  */
 import metadata from './block.json';
-import attributes from './attributes.json';
+import getAttributes from './attributes.json';
 
 registerBlockType( metadata.name, {
-	attributes,
+	attributes: getAttributes,
 	edit: ( props ) => {
 		const { attributes, setAttributes } = props;
-
-		console.log( attributes );
 
 		// Get Unique ID for the <BaseControl>
 		const randomID = randomString();
@@ -125,7 +123,6 @@ registerBlockType( metadata.name, {
 		);
 	},
 	save: ( { attributes } ) => {
-		console.log( attributes );
 		return (
 			<div
 				{ ...useBlockProps.save() }

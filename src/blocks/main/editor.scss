@@ -1,5 +1,33 @@
-#emailjs-pattern {
-	padding: 15px;
-	background: #efefef;
-	border: 1px solid #d8d8d8;
+.wp-block-mchymcak-emailjs-pattern {
+	display: block;
+	clear: both;
+
+	&:where(:not(.alignleft):not(.alignright)) {
+		max-width: 650px;
+		width: 100%;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+
+	&.emailjs-block-left {
+		display: inline;
+		float: left;
+		margin-inline-start: 0;
+		margin-inline-end: 2em;
+	}
+
+	&.emailjs-block-right {
+		display: inline;
+		float: right;
+		margin-inline-start: 2em;
+		margin-inline-end: 0;
+	}
+
+	&.emailjs-block-wide {
+		max-width: 1000px;
+	}
+
+	&.emailjs-block-full {
+		max-width: none;
+	}
 }

@@ -221,6 +221,7 @@ registerBlockType( metadata.name, {
 					{ attributes.label }
 				</label>
 				<RichText.Content
+					required={ attributes.type === 'email' ? true : false }
 					id={ uniqueID }
 					tagName="input"
 					type={ attributes.type }

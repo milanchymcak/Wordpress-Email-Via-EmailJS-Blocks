@@ -59,5 +59,10 @@
 
 	.wp-block-mchymcak-emailjs-response {
 		display: none;
+		margin: 15px 0;
+
+		&.show {
+			display: block;
+		}
 	}
 }

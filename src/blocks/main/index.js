@@ -179,7 +179,9 @@ registerBlockType( metadata.name, {
 					</PanelBody>
 				</InspectorControls>
 				<div
-					{ ...useBlockProps() }
+					{ ...useBlockProps( {
+						className: 'align' + attributes.blockAlign,
+					} ) }
 					style={ {
 						padding: attributes.padding,
 						backgroundColor: attributes.bg_Color,
@@ -187,7 +189,7 @@ registerBlockType( metadata.name, {
 						borderWidth: attributes.border_Width,
 					} }
 				>
-					<BlockControls group="block">
+					<BlockControls>
 						<BlockAlignmentToolbar
 							value={ attributes.blockAlign }
 							onChange={ ( blockAlign ) => {
@@ -207,7 +209,10 @@ registerBlockType( metadata.name, {
 		const { attributes } = props;
 		return (
 			<div
-				className={ metadata.textdomain }
+				className={ [
+					metadata.textdomain,
+					'align' + attributes.blockAlign,
+				].join( ' ' ) }
 				style={ {
 					padding: attributes.padding,
 					backgroundColor: attributes.bg_Color,
@@ -215,7 +220,6 @@ registerBlockType( metadata.name, {
 					borderWidth: attributes.border_Width,
 				} }
 			>
-				<div id="emails-response"></div>
 				<form
 					action="#"
 					method="post"

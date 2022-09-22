@@ -30,7 +30,7 @@ window.addEventListener( 'load', () => {
 		}
 
 		// Get Response Target
-		const EmailsjsTarget = EmailsjsForm.querySelector(
+		const EmailsjsTarget = EmailjsForm.querySelector(
 			'.wp-block-mchymcak-emailjs-response'
 		);
 

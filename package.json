@@ -1,6 +1,6 @@
 {
 	"name": "emailjs-block",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "Add Emailjs.com Contact Form",
 	"author": "Milan Chymčák",
 	"license": "GPL-2.0-or-later",
@@ -19,7 +19,6 @@
 		"build": "wp-scripts build --webpack-copy-php",
 		"format": "wp-scripts format",
 		"lint:css": "wp-scripts lint-style",
-		"lint:css:fix": "wp-scripts lint-style --fix .",
 		"lint:js": "wp-scripts lint-js",
 		"lint:js:fix": "wp-scripts lint-js --fix .",
 		"lint:pkg-json": "wp-scripts lint-pkg-json",

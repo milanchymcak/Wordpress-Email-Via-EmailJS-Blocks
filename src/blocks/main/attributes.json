@@ -51,6 +51,6 @@
         "type": "string",
         "selector": "div",
         "attribute": "align",
-        "default": "wide"
+        "default": "center"
     }
 }

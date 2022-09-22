@@ -5,7 +5,7 @@ Gutenberg Contact Form - Send emails from WordPress without a mail server throug
 
 # Prerequisite
 
-First you need to have an active EmailJS account. [Register for free](https://www.emailjs.com/)
+First, you need to have an active EmailJS account. [Register for free](https://www.emailjs.com/)
 
 1. Emailjs.com Public API Key [Get it here](https://dashboard.emailjs.com/admin/account)
 2. Emailjs.com Template ID [Get it here](https://dashboard.emailjs.com/admin/templates)
@@ -13,7 +13,7 @@ First you need to have an active EmailJS account. [Register for free](https://ww
 
 # Recaptcha
 
-The WordPress Emailjs Gutenberg Plugin is also comming with recaptcha support, in order to get it working, you have to get recaptcha keys.
+The WordPress Emailjs Gutenberg Plugin is also coming with Recaptcha support, to get it working, you have to get Recaptcha keys.
 
 1. [Register at Google.com for free](https://www.google.com/recaptcha/admin/create)
 2. Enter Recaptcha private key in the emailjs template interface (Step 2. in #Prerequisite)
@@ -21,7 +21,7 @@ The WordPress Emailjs Gutenberg Plugin is also comming with recaptcha support, i
 
 # Instalattion
 
-1. Enter site editor or post editor and simple add block called "Contact Form - Emailjs"
+1. Enter site editor or post editor and simply add a block called "Contact Form - Emailjs"
 2. Enter the required API keys from the previous steps
 
 ![Emailjs Settings](https://raw.githubusercontent.com/milanchymcak/emailjs-gutenberg/main/emailjs.webp "Emailjs Settings")

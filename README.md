@@ -21,7 +21,7 @@ The WordPress Emailjs Plugin is also coming with Recaptcha support, to get it wo
 2. Enter Recaptcha private key in the emailjs template interface (Step 2. in #Prerequisite)
 3. Store public key for the Contact Form Plugin
 
-# Instalattion
+# Installation
 
 1. Enter site editor or post editor and simply add a block called "Contact Form - Emailjs"
 2. Enter the required API keys from the previous steps

@@ -3,7 +3,7 @@
 	"apiVersion": 2,
 	"name": "mchymcak/emailjs-response",
 	"title": "Text (Response) Element",
-	"icon": "heading",
+	"icon": "format-quote",
 	"example": {},
 	"description": "Message After Form Submit",
 	"category": "text",

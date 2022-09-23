@@ -4,7 +4,7 @@
  * Description:       Emailjs Contact Form - Send emails from WordPress without mail server through emailjs.com API
  * Requires at least: 5.6
  * Requires PHP:      7.3
- * Version:           0.2.0
+ * Version:           1.0
  * Author:            Milan Chymčák
  * Author URI:        https://chymcakmilan.com
  * License:           GPL-2.0-or-later

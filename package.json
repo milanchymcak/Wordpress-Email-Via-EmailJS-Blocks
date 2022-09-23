@@ -1,5 +1,5 @@
 {
-	"name": "emailjs-block",
+	"name": "email-via-emailjs-blocks",
 	"version": "0.2.0",
 	"description": "Email via Emailjs Blocks - Send emails from WordPress without a mail server through emailjs.com API. Just add your free API keys and have your contact form ready in no time.",
 	"author": "Milan Chymčák",

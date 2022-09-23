@@ -55,10 +55,10 @@ registerBlockType( metadata.name, {
 				<InspectorControls>
 					<PanelBody
 						initialOpen={ false }
-						title={ __( 'Label Settings', 'emailjs-block' ) }
+						title={ __( 'Label Settings', 'email-via-emailjs-blocks' ) }
 					>
 						<SelectControl
-							label={ __( 'Hide Label', 'emailjs-block' ) }
+							label={ __( 'Hide Label', 'email-via-emailjs-blocks' ) }
 							value={ attributes.hiddenLabel }
 							options={ [
 								{
@@ -77,7 +77,7 @@ registerBlockType( metadata.name, {
 						/>
 						<Divider />
 						<TextControl
-							label={ __( 'Label Content', 'emailjs-block' ) }
+							label={ __( 'Label Content', 'email-via-emailjs-blocks' ) }
 							value={ attributes.label }
 							onChange={ ( val ) =>
 								setAttributes( { label: val } )
@@ -87,7 +87,7 @@ registerBlockType( metadata.name, {
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Label Text Color', 'emailjs-block' ) }
+							label={ __( 'Label Text Color', 'email-via-emailjs-blocks' ) }
 							target="label_Color"
 							default={ attributes.label_Color }
 						/>
@@ -95,25 +95,25 @@ registerBlockType( metadata.name, {
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Background Color', 'emailjs-block' ) }
+							label={ __( 'Background Color', 'email-via-emailjs-blocks' ) }
 							target="label_Color"
 							default={ attributes.bg_Color }
 						/>
 					</PanelBody>
 					<PanelBody
 						initialOpen={ false }
-						title={ __( 'Input Settings', 'emailjs-block' ) }
+						title={ __( 'Input Settings', 'email-via-emailjs-blocks' ) }
 					>
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Input Text Color', 'emailjs-block' ) }
+							label={ __( 'Input Text Color', 'email-via-emailjs-blocks' ) }
 							target="input_Color"
 							default={ attributes.input_Color }
 						/>
 						<Divider />
 						<TextControl
-							label={ __( 'Name Attribute', 'emailjs-block' ) }
+							label={ __( 'Name Attribute', 'email-via-emailjs-blocks' ) }
 							value={ attributes.name }
 							onChange={ ( val ) =>
 								setAttributes( { name: val } )
@@ -121,7 +121,7 @@ registerBlockType( metadata.name, {
 						/>
 						<Divider />
 						<TextControl
-							label={ __( 'Type Attribute', 'emailjs-block' ) }
+							label={ __( 'Type Attribute', 'email-via-emailjs-blocks' ) }
 							value={ attributes.type }
 							onChange={ ( val ) =>
 								setAttributes( { type: val } )
@@ -131,7 +131,7 @@ registerBlockType( metadata.name, {
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Background Color', 'emailjs-block' ) }
+							label={ __( 'Background Color', 'email-via-emailjs-blocks' ) }
 							target="bg_Color"
 							default={ attributes.bg_Color }
 						/>
@@ -139,13 +139,13 @@ registerBlockType( metadata.name, {
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Border Color', 'emailjs-block' ) }
+							label={ __( 'Border Color', 'email-via-emailjs-blocks' ) }
 							target="border_Color"
 							default={ attributes.border_Color }
 						/>
 						<Divider />
 						<RangeControl
-							label={ __( 'Border Width', 'emailjs-block' ) }
+							label={ __( 'Border Width', 'email-via-emailjs-blocks' ) }
 							value={ attributes.border_Width }
 							onChange={ ( val ) =>
 								setAttributes( { border_Width: val } )

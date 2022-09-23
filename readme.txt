@@ -8,7 +8,7 @@ License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Gutenberg Contact Form - Send emails from WordPress without a mail server through emailjs.com API. Just add your free API keys and have your contact form ready in no time.
+Email via Emailjs Blocks - Send emails from WordPress without a mail server through emailjs.com API. Just add your free API keys and have your contact form ready in no time.
 
 == Prerequisite ==
 First, you need to have an active EmailJS account. Register for free at https://www.emailjs.com
@@ -18,7 +18,7 @@ First, you need to have an active EmailJS account. Register for free at https://
 3) Service ID - https://dashboard.emailjs.com/admin
 
 == Recaptcha ==
-The WordPress Emailjs Gutenberg Plugin is also coming with Recaptcha support, to get it working, you have to get Recaptcha keys. Register at https://www.google.com/recaptcha/admin/create
+The WP plugin "Email via Emailjs Blocks" is also coming with the Recaptcha support, to get it working, you have to get Recaptcha keys. Register at https://www.google.com/recaptcha/admin/create
 
 == Instalattion ==
 Enter site editor or post editor and simple add a block called "Contact Form - Emailjs"

@@ -39,17 +39,17 @@ registerBlockType( metadata.name, {
 		// Default Font Sizes
 		const fontSizes = [
 			{
-				name: __( 'Small', 'emailjs-block' ),
+				name: __( 'Small', 'email-via-emailjs-blocks' ),
 				slug: 'small',
 				size: 12,
 			},
 			{
-				name: __( 'Medium', 'emailjs-block' ),
+				name: __( 'Medium', 'email-via-emailjs-blocks' ),
 				slug: 'Medium',
 				size: 19,
 			},
 			{
-				name: __( 'Big', 'emailjs-block' ),
+				name: __( 'Big', 'email-via-emailjs-blocks' ),
 				slug: 'big',
 				size: 26,
 			},
@@ -60,12 +60,12 @@ registerBlockType( metadata.name, {
 				<InspectorControls>
 					<PanelBody
 						initialOpen={ false }
-						title={ __( 'Color Settings', 'emailjs-block' ) }
+						title={ __( 'Color Settings', 'email-via-emailjs-blocks' ) }
 					>
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Label Text Color', 'emailjs-block' ) }
+							label={ __( 'Label Text Color', 'email-via-emailjs-blocks' ) }
 							target="color"
 							default={ attributes.color }
 						/>
@@ -73,14 +73,14 @@ registerBlockType( metadata.name, {
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Background Color', 'emailjs-block' ) }
+							label={ __( 'Background Color', 'email-via-emailjs-blocks' ) }
 							target="bg_Color"
 							default={ attributes.bg_Color }
 						/>
 					</PanelBody>
 					<PanelBody
 						initialOpen={ false }
-						title={ __( 'Typography', 'emailjs-block' ) }
+						title={ __( 'Typography', 'email-via-emailjs-blocks' ) }
 					>
 						<FontSizePicker
 							__nextHasNoMarginBottom
@@ -113,7 +113,7 @@ registerBlockType( metadata.name, {
 						onChange={ ( headline ) =>
 							setAttributes( { headline } )
 						}
-						placeholder={ __( 'Contact Us', 'emailjs-block' ) }
+						placeholder={ __( 'Contact Us', 'email-via-emailjs-blocks' ) }
 						className="emailjs-headline"
 						style={ {
 							color: attributes.color,

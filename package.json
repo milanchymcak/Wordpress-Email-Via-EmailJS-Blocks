@@ -1,10 +1,10 @@
 {
 	"name": "emailjs-block",
 	"version": "0.2.0",
-	"description": "Add Emailjs.com Contact Form",
+	"description": "Email via Emailjs Blocks - Send emails from WordPress without a mail server through emailjs.com API. Just add your free API keys and have your contact form ready in no time.",
 	"author": "Milan Chymčák",
 	"license": "GPL-2.0-or-later",
-	"keywords": ["Emailjs", "Contact Form"],
+	"keywords": ["Emailjs", "Contact Form", "Email via Emailjs Blocks"],
 	"homepage": "https://chymcakmilan.com",
 	"repository": "https://github.com/milanchymcak/emailjs-gutenberg/",
 	"bugs": {

@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Emailjs Blocks
+ * Plugin Name:       Email via Emailjs Blocks
  * Description:       Emailjs Contact Form - Send emails from WordPress without mail server through emailjs.com API
  * Requires at least: 5.6
  * Requires PHP:      7.3
@@ -9,10 +9,10 @@
  * Author URI:        https://chymcakmilan.com
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       emailjs-block
+ * Text Domain:       email-via-emailjs-blocks
  * Domain Path:       /locales
  *
- * @package           emailjs-block
+ * @package           email-via-emailjs-blocks
  */
 
 /**

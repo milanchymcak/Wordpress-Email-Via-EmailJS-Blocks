@@ -35,7 +35,7 @@ const mainTemplate = [
 	[
 		'mchymcak/emailjs-headline',
 		{
-			headline: __( 'Feel free to message us', 'emailjs-block' ),
+			headline: __( 'Feel free to message us', 'email-via-emailjs-blocks' ),
 		},
 	],
 	[
@@ -43,7 +43,7 @@ const mainTemplate = [
 		{
 			name: 'user_name',
 			type: 'name',
-			label: __( 'Full Name', 'emailjs-block' ),
+			label: __( 'Full Name', 'email-via-emailjs-blocks' ),
 			placeholder: 'John Snow',
 		},
 	],
@@ -52,14 +52,14 @@ const mainTemplate = [
 		{
 			name: 'user_email',
 			type: 'email',
-			label: __( 'Your Email', 'emailjs-block' ),
+			label: __( 'Your Email', 'email-via-emailjs-blocks' ),
 			placeholder: 'email@email.com',
 		},
 	],
 	[
 		'mchymcak/emailjs-textarea',
 		{
-			label: __( 'Your Message', 'emailjs-block' ),
+			label: __( 'Your Message', 'email-via-emailjs-blocks' ),
 		},
 	],
 	[
@@ -71,7 +71,7 @@ const mainTemplate = [
 	[
 		'mchymcak/emailjs-response',
 		{
-			message: __( 'Thank you for your message!', 'emailjs-block' ),
+			message: __( 'Thank you for your message!', 'email-via-emailjs-blocks' ),
 		},
 	],
 ];
@@ -99,24 +99,24 @@ registerBlockType( metadata.name, {
 			<>
 				<InspectorControls>
 					<PanelBody
-						title={ __( 'EmailJS Settings', 'emailjs-block' ) }
+						title={ __( 'EmailJS Settings', 'email-via-emailjs-blocks' ) }
 					>
 						<TextControl
-							label={ __( 'Public Key', 'emailjs-block' ) }
+							label={ __( 'Public Key', 'email-via-emailjs-blocks' ) }
 							value={ attributes.public_Key }
 							onChange={ ( val ) =>
 								setAttributes( { public_Key: val } )
 							}
 						/>
 						<TextControl
-							label={ __( 'Template ID', 'emailjs-block' ) }
+							label={ __( 'Template ID', 'email-via-emailjs-blocks' ) }
 							value={ attributes.template_ID }
 							onChange={ ( val ) =>
 								setAttributes( { template_ID: val } )
 							}
 						/>
 						<TextControl
-							label={ __( 'Service ID', 'emailjs-block' ) }
+							label={ __( 'Service ID', 'email-via-emailjs-blocks' ) }
 							value={ attributes.service_ID }
 							onChange={ ( val ) =>
 								setAttributes( { service_ID: val } )
@@ -125,7 +125,7 @@ registerBlockType( metadata.name, {
 						<TextControl
 							label={ __(
 								'Recaptcha Key (optional)',
-								'emailjs-block'
+								'email-via-emailjs-blocks'
 							) }
 							value={ attributes.recaptcha_key }
 							onChange={ ( val ) =>
@@ -135,18 +135,18 @@ registerBlockType( metadata.name, {
 					</PanelBody>
 					<PanelBody
 						initialOpen={ false }
-						title={ __( 'Contact Form Settings', 'emailjs-block' ) }
+						title={ __( 'Contact Form Settings', 'email-via-emailjs-blocks' ) }
 					>
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Background Color', 'emailjs-block' ) }
+							label={ __( 'Background Color', 'email-via-emailjs-blocks' ) }
 							target="bg_Color"
 							default={ attributes.bg_Color }
 						/>
 						<Divider />
 						<RangeControl
-							label={ __( 'Padding', 'emailjs-block' ) }
+							label={ __( 'Padding', 'email-via-emailjs-blocks' ) }
 							value={ attributes.padding }
 							onChange={ ( val ) =>
 								setAttributes( { padding: val } )
@@ -160,13 +160,13 @@ registerBlockType( metadata.name, {
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Border Color', 'emailjs-block' ) }
+							label={ __( 'Border Color', 'email-via-emailjs-blocks' ) }
 							target="border_Color"
 							default={ attributes.border_Color }
 						/>
 						<Divider />
 						<RangeControl
-							label={ __( 'Border Width', 'emailjs-block' ) }
+							label={ __( 'Border Width', 'email-via-emailjs-blocks' ) }
 							value={ attributes.border_Width }
 							onChange={ ( val ) =>
 								setAttributes( { border_Width: val } )

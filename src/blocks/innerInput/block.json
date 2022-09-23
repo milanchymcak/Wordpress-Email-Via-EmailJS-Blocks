@@ -10,7 +10,7 @@
 	"supports": {
 		"html": false
 	},
-	"textdomain": "emailjs-block",
+	"textdomain": "email-via-emailjs-blocks",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"parent": [ "mchymcak/emailjs-pattern" ]

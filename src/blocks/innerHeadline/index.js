@@ -60,12 +60,18 @@ registerBlockType( metadata.name, {
 				<InspectorControls>
 					<PanelBody
 						initialOpen={ false }
-						title={ __( 'Color Settings', 'email-via-emailjs-blocks' ) }
+						title={ __(
+							'Color Settings',
+							'email-via-emailjs-blocks'
+						) }
 					>
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Label Text Color', 'email-via-emailjs-blocks' ) }
+							label={ __(
+								'Label Text Color',
+								'email-via-emailjs-blocks'
+							) }
 							target="color"
 							default={ attributes.color }
 						/>
@@ -73,7 +79,10 @@ registerBlockType( metadata.name, {
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Background Color', 'email-via-emailjs-blocks' ) }
+							label={ __(
+								'Background Color',
+								'email-via-emailjs-blocks'
+							) }
 							target="bg_Color"
 							default={ attributes.bg_Color }
 						/>
@@ -113,7 +122,10 @@ registerBlockType( metadata.name, {
 						onChange={ ( headline ) =>
 							setAttributes( { headline } )
 						}
-						placeholder={ __( 'Contact Us', 'email-via-emailjs-blocks' ) }
+						placeholder={ __(
+							'Contact Us',
+							'email-via-emailjs-blocks'
+						) }
 						className="emailjs-headline"
 						style={ {
 							color: attributes.color,

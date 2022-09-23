@@ -35,7 +35,10 @@ const mainTemplate = [
 	[
 		'mchymcak/emailjs-headline',
 		{
-			headline: __( 'Feel free to message us', 'email-via-emailjs-blocks' ),
+			headline: __(
+				'Feel free to message us',
+				'email-via-emailjs-blocks'
+			),
 		},
 	],
 	[
@@ -71,7 +74,10 @@ const mainTemplate = [
 	[
 		'mchymcak/emailjs-response',
 		{
-			message: __( 'Thank you for your message!', 'email-via-emailjs-blocks' ),
+			message: __(
+				'Thank you for your message!',
+				'email-via-emailjs-blocks'
+			),
 		},
 	],
 ];
@@ -99,24 +105,36 @@ registerBlockType( metadata.name, {
 			<>
 				<InspectorControls>
 					<PanelBody
-						title={ __( 'EmailJS Settings', 'email-via-emailjs-blocks' ) }
+						title={ __(
+							'EmailJS Settings',
+							'email-via-emailjs-blocks'
+						) }
 					>
 						<TextControl
-							label={ __( 'Public Key', 'email-via-emailjs-blocks' ) }
+							label={ __(
+								'Public Key',
+								'email-via-emailjs-blocks'
+							) }
 							value={ attributes.public_Key }
 							onChange={ ( val ) =>
 								setAttributes( { public_Key: val } )
 							}
 						/>
 						<TextControl
-							label={ __( 'Template ID', 'email-via-emailjs-blocks' ) }
+							label={ __(
+								'Template ID',
+								'email-via-emailjs-blocks'
+							) }
 							value={ attributes.template_ID }
 							onChange={ ( val ) =>
 								setAttributes( { template_ID: val } )
 							}
 						/>
 						<TextControl
-							label={ __( 'Service ID', 'email-via-emailjs-blocks' ) }
+							label={ __(
+								'Service ID',
+								'email-via-emailjs-blocks'
+							) }
 							value={ attributes.service_ID }
 							onChange={ ( val ) =>
 								setAttributes( { service_ID: val } )
@@ -135,18 +153,27 @@ registerBlockType( metadata.name, {
 					</PanelBody>
 					<PanelBody
 						initialOpen={ false }
-						title={ __( 'Contact Form Settings', 'email-via-emailjs-blocks' ) }
+						title={ __(
+							'Contact Form Settings',
+							'email-via-emailjs-blocks'
+						) }
 					>
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Background Color', 'email-via-emailjs-blocks' ) }
+							label={ __(
+								'Background Color',
+								'email-via-emailjs-blocks'
+							) }
 							target="bg_Color"
 							default={ attributes.bg_Color }
 						/>
 						<Divider />
 						<RangeControl
-							label={ __( 'Padding', 'email-via-emailjs-blocks' ) }
+							label={ __(
+								'Padding',
+								'email-via-emailjs-blocks'
+							) }
 							value={ attributes.padding }
 							onChange={ ( val ) =>
 								setAttributes( { padding: val } )
@@ -160,13 +187,19 @@ registerBlockType( metadata.name, {
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Border Color', 'email-via-emailjs-blocks' ) }
+							label={ __(
+								'Border Color',
+								'email-via-emailjs-blocks'
+							) }
 							target="border_Color"
 							default={ attributes.border_Color }
 						/>
 						<Divider />
 						<RangeControl
-							label={ __( 'Border Width', 'email-via-emailjs-blocks' ) }
+							label={ __(
+								'Border Width',
+								'email-via-emailjs-blocks'
+							) }
 							value={ attributes.border_Width }
 							onChange={ ( val ) =>
 								setAttributes( { border_Width: val } )

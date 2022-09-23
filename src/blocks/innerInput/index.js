@@ -17,6 +17,7 @@ import {
 import NewColorPalette from '../.././components/NewColorPalette';
 import Divider from '../.././components/Divider';
 import { randomString } from '../.././utils/randomString';
+import { generateID } from '../.././utils/generateId';
 
 /**
  *
@@ -38,7 +39,7 @@ registerBlockType( metadata.name, {
 	attributes: getAttributes,
 	edit: ( props ) => {
 		// Get Unique ID of the Block
-		const uniqueID = props.clientId;
+		const uniqueID = generateID( props.clientId );
 
 		const { attributes, setAttributes } = props;
 
@@ -55,10 +56,16 @@ registerBlockType( metadata.name, {
 				<InspectorControls>
 					<PanelBody
 						initialOpen={ false }
-						title={ __( 'Label Settings', 'email-via-emailjs-blocks' ) }
+						title={ __(
+							'Label Settings',
+							'email-via-emailjs-blocks'
+						) }
 					>
 						<SelectControl
-							label={ __( 'Hide Label', 'email-via-emailjs-blocks' ) }
+							label={ __(
+								'Hide Label',
+								'email-via-emailjs-blocks'
+							) }
 							value={ attributes.hiddenLabel }
 							options={ [
 								{
@@ -77,7 +84,10 @@ registerBlockType( metadata.name, {
 						/>
 						<Divider />
 						<TextControl
-							label={ __( 'Label Content', 'email-via-emailjs-blocks' ) }
+							label={ __(
+								'Label Content',
+								'email-via-emailjs-blocks'
+							) }
 							value={ attributes.label }
 							onChange={ ( val ) =>
 								setAttributes( { label: val } )
@@ -87,7 +97,10 @@ registerBlockType( metadata.name, {
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Label Text Color', 'email-via-emailjs-blocks' ) }
+							label={ __(
+								'Label Text Color',
+								'email-via-emailjs-blocks'
+							) }
 							target="label_Color"
 							default={ attributes.label_Color }
 						/>
@@ -95,25 +108,48 @@ registerBlockType( metadata.name, {
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Background Color', 'email-via-emailjs-blocks' ) }
+							label={ __(
+								'Background Color',
+								'email-via-emailjs-blocks'
+							) }
 							target="label_Color"
 							default={ attributes.bg_Color }
 						/>
 					</PanelBody>
 					<PanelBody
 						initialOpen={ false }
-						title={ __( 'Input Settings', 'email-via-emailjs-blocks' ) }
+						title={ __(
+							'Input Settings',
+							'email-via-emailjs-blocks'
+						) }
 					>
-						<NewColorPalette
-							attributes={ attributes }
-							setAttributes={ setAttributes }
-							label={ __( 'Input Text Color', 'email-via-emailjs-blocks' ) }
-							target="input_Color"
-							default={ attributes.input_Color }
+						<SelectControl
+							label={ __(
+								'Required Field',
+								'email-via-emailjs-blocks'
+							) }
+							value={ attributes.required }
+							options={ [
+								{
+									label: 'No',
+									value: false,
+								},
+								{
+									label: 'Yes',
+									value: true,
+								},
+							] }
+							onChange={ ( val ) => {
+								setAttributes( { required: val } );
+							} }
+							__nextHasNoMarginBottom
 						/>
 						<Divider />
 						<TextControl
-							label={ __( 'Name Attribute', 'email-via-emailjs-blocks' ) }
+							label={ __(
+								'Name Attribute',
+								'email-via-emailjs-blocks'
+							) }
 							value={ attributes.name }
 							onChange={ ( val ) =>
 								setAttributes( { name: val } )
@@ -121,7 +157,10 @@ registerBlockType( metadata.name, {
 						/>
 						<Divider />
 						<TextControl
-							label={ __( 'Type Attribute', 'email-via-emailjs-blocks' ) }
+							label={ __(
+								'Type Attribute',
+								'email-via-emailjs-blocks'
+							) }
 							value={ attributes.type }
 							onChange={ ( val ) =>
 								setAttributes( { type: val } )
@@ -131,7 +170,21 @@ registerBlockType( metadata.name, {
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Background Color', 'email-via-emailjs-blocks' ) }
+							label={ __(
+								'Input Text Color',
+								'email-via-emailjs-blocks'
+							) }
+							target="input_Color"
+							default={ attributes.input_Color }
+						/>
+						<Divider />
+						<NewColorPalette
+							attributes={ attributes }
+							setAttributes={ setAttributes }
+							label={ __(
+								'Background Color',
+								'email-via-emailjs-blocks'
+							) }
 							target="bg_Color"
 							default={ attributes.bg_Color }
 						/>
@@ -139,13 +192,19 @@ registerBlockType( metadata.name, {
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Border Color', 'email-via-emailjs-blocks' ) }
+							label={ __(
+								'Border Color',
+								'email-via-emailjs-blocks'
+							) }
 							target="border_Color"
 							default={ attributes.border_Color }
 						/>
 						<Divider />
 						<RangeControl
-							label={ __( 'Border Width', 'email-via-emailjs-blocks' ) }
+							label={ __(
+								'Border Width',
+								'email-via-emailjs-blocks'
+							) }
 							value={ attributes.border_Width }
 							onChange={ ( val ) =>
 								setAttributes( { border_Width: val } )
@@ -200,15 +259,12 @@ registerBlockType( metadata.name, {
 		);
 	},
 	save: ( props ) => {
-		// Get Unique ID of the Block
-		const uniqueID = props.clientId;
-
 		const { attributes } = props;
 
 		return (
 			<>
 				<label
-					htmlFor={ uniqueID }
+					htmlFor={ attributes.uniqueID }
 					className={
 						attributes.hiddenLabel === 'true'
 							? 'hideLabel'
@@ -221,8 +277,8 @@ registerBlockType( metadata.name, {
 					{ attributes.label }
 				</label>
 				<RichText.Content
-					required={ attributes.type === 'email' ? true : false }
-					id={ uniqueID }
+					required={ attributes.required === 'true' ? true : false }
+					id={ attributes.uniqueID }
 					tagName="input"
 					type={ attributes.type }
 					placeholder={ attributes.placeholder }

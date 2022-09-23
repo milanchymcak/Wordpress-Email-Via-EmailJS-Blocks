@@ -60,12 +60,18 @@ registerBlockType( metadata.name, {
 				<InspectorControls>
 					<PanelBody
 						initialOpen={ false }
-						title={ __( 'Design Settings', 'email-via-emailjs-blocks' ) }
+						title={ __(
+							'Design Settings',
+							'email-via-emailjs-blocks'
+						) }
 					>
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Text Color', 'email-via-emailjs-blocks' ) }
+							label={ __(
+								'Text Color',
+								'email-via-emailjs-blocks'
+							) }
 							target="text_Color"
 							default={ attributes.text_Color }
 						/>
@@ -73,7 +79,10 @@ registerBlockType( metadata.name, {
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Background Color', 'email-via-emailjs-blocks' ) }
+							label={ __(
+								'Background Color',
+								'email-via-emailjs-blocks'
+							) }
 							target="bg_Color"
 							default={ attributes.bg_Color }
 						/>
@@ -111,13 +120,19 @@ registerBlockType( metadata.name, {
 						<NewColorPalette
 							attributes={ attributes }
 							setAttributes={ setAttributes }
-							label={ __( 'Border Color', 'email-via-emailjs-blocks' ) }
+							label={ __(
+								'Border Color',
+								'email-via-emailjs-blocks'
+							) }
 							target="border_Color"
 							default={ attributes.border_Color }
 						/>
 						<Divider />
 						<RangeControl
-							label={ __( 'Border Width', 'email-via-emailjs-blocks' ) }
+							label={ __(
+								'Border Width',
+								'email-via-emailjs-blocks'
+							) }
 							value={ attributes.border_Width }
 							onChange={ ( val ) =>
 								setAttributes( { border_Width: val } )
@@ -130,10 +145,16 @@ registerBlockType( metadata.name, {
 					</PanelBody>
 					<PanelBody
 						initialOpen={ false }
-						title={ __( 'Button Settings', 'email-via-emailjs-blocks' ) }
+						title={ __(
+							'Button Settings',
+							'email-via-emailjs-blocks'
+						) }
 					>
 						<TextControl
-							label={ __( 'Type Attribute', 'email-via-emailjs-blocks' ) }
+							label={ __(
+								'Type Attribute',
+								'email-via-emailjs-blocks'
+							) }
 							value={ attributes.type }
 							onChange={ ( val ) =>
 								setAttributes( { type: val } )

@@ -2,12 +2,12 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
   "name": "mchymcak/emailjs-pattern",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "title": "Contact Form - Emailjs",
   "category": "widgets",
   "icon": "email-alt",
   "example": {},
-  "description": "Unofficial implementation of email.js service.",
+  "description": "Unofficial implementation of EmailJS service.",
   "supports": {
     "html": false
   },
@@ -18,7 +18,7 @@
     "emailjs",
     "email.js"
   ],
-  "textdomain": "emailjs-block",
+  "textdomain": "email-via-emailjs-blocks",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",

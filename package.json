@@ -6,9 +6,9 @@
 	"license": "GPL-2.0-or-later",
 	"keywords": ["Emailjs", "Contact Form", "Email via Emailjs Blocks"],
 	"homepage": "https://chymcakmilan.com",
-	"repository": "https://github.com/milanchymcak/emailjs-gutenberg/",
+	"repository": "https://github.com/milanchymcak/wordpress-email-via-emailjs-blocks",
 	"bugs": {
-		"url" : "https://github.com/milanchymcak/emailjs-gutenberg/issues",
+		"url" : "https://github.com/milanchymcak/wordpress-email-via-emailjs-blocks/issues",
 		"email" : "contact@chymcakmilan.com"
 	},
 	"main": "build/index.js",

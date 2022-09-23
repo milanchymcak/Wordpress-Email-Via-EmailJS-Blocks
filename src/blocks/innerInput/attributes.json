@@ -64,5 +64,10 @@
     },  
     "uniqueID": {
         "type": "string"
+    },
+    "required": {
+        "type": "string",
+        "selector": "input",
+        "default": "false"
     }
 }

@@ -1,3 +1,6 @@
+# Now available on the WordPress Plugins Repository!
+[https://wordpress.org/plugins/email-via-emailjs-blocks/](https://wordpress.org/plugins/email-via-emailjs-blocks/)
+
 # Email via Emailjs Blocks - Emailjs API 
 Email via Emailjs Blocks - Send emails from WordPress without a mail server through emailjs.com API. Just add your free API keys and have your contact form ready in no time.
 
